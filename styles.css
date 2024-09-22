@@ -1,7 +1,19 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc;
+}
+
 #girasol-container {
     position: relative;
-    width: 100px; /* Cambia el tamaño del girasol si lo necesitas */
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Ajusta el tamaño del girasol si lo necesitas */
+    height: 300px;
     border-radius: 50%;
     background-color: #ffe066;
 }
@@ -28,8 +40,8 @@
 
 .pipa {
     position: absolute;
-    width: 0px;
-    height: 0px;
+    width: 10px;
+    height: 30px;
     background-color: black;
 }
 

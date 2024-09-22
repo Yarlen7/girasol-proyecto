@@ -1,20 +1,59 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girasol</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="girasol-container">
-        <div id="centro-girasol"></div>
-        <div id="pipas-container"></div> <!-- Contenedor para las pipas -->
-    </div>
-    <audio controls autoplay loop>
-        <source src="flores-amarillas.mp3" type="audio/mpeg">
-        Tu navegador no soporta el audio.
-    </audio>
-    <script src="script.js"></script>
-</body>
-</html>
+#girasol-container {
+    position: relative;
+    width: 100px; /* Cambia el tamaño del girasol si lo necesitas */
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffe066;
+}
+
+#centro-girasol {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Centra el centro del girasol */
+}
+
+.petalo {
+    position: absolute;
+    width: 30px;
+    height: 90px;
+    background-color: yellow;
+    border-radius: 20px 20px 0 0;
+    transform-origin: bottom center;
+}
+
+.pipa {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: black;
+}
+
+audio {
+    position: absolute; /* Permite ajustar su posición con top, left, right, y bottom */
+    right: 300px; /* Ajusta este valor para moverlo más a la derecha */
+    bottom: 300px; /* Ajusta para subirlo o bajarlo si es necesario */
+}
+
+@media (max-width: 768px) {
+    /* Ajustes específicos para pantallas pequeñas (celulares) */
+    #girasol-container {
+        width: 80px;
+        height: 160px;
+    }
+
+    #centro-girasol {
+        width: 150px;
+        height: 150px;
+    }
+
+    audio {
+        right: 10px; /* Ajusta posición del audio en móviles */
+        bottom: 10px;
+        width: 90%; /* Asegura que el audio no se salga de la pantalla */
+    }
+}

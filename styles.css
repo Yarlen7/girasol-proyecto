@@ -9,7 +9,7 @@ body {
 
 #girasol-container {
     position: relative;
-    width: 200px;
+    width: 100px; /* Cambia el tamaño del girasol si lo necesitas */
     height: 200px;
     border-radius: 50%;
     background-color: #ffe066;
@@ -17,20 +17,25 @@ body {
 
 #centro-girasol {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
+    top: 45%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
     background-color: brown;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centra el centro del girasol */
 }
 
 .petalo {
     position: absolute;
-    width: 20px;
-    height: 80px;
+    width: 30px;
+    height: 90px;
     background-color: yellow;
     border-radius: 20px 20px 0 0;
     transform-origin: bottom center;
+}
+audio {
+    position: absolute; /* Permite ajustar su posición con top, left, right, y bottom */
+    right: 300px; /* Ajusta este valor para moverlo más a la derecha */
+    bottom: 300px; /* Ajusta para subirlo o bajarlo si es necesario */
 }

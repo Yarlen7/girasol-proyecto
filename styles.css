@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5dc;
-}
-
 #girasol-container {
     position: relative;
     width: 100px; /* Cambia el tamaño del girasol si lo necesitas */
@@ -34,8 +25,35 @@ body {
     border-radius: 20px 20px 0 0;
     transform-origin: bottom center;
 }
+
+.pipa {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: black;
+}
+
 audio {
     position: absolute; /* Permite ajustar su posición con top, left, right, y bottom */
     right: 300px; /* Ajusta este valor para moverlo más a la derecha */
     bottom: 300px; /* Ajusta para subirlo o bajarlo si es necesario */
+}
+
+@media (max-width: 768px) {
+    /* Ajustes específicos para pantallas pequeñas (celulares) */
+    #girasol-container {
+        width: 80px;
+        height: 160px;
+    }
+
+    #centro-girasol {
+        width: 150px;
+        height: 150px;
+    }
+
+    audio {
+        right: 10px; /* Ajusta posición del audio en móviles */
+        bottom: 10px;
+        width: 90%; /* Asegura que el audio no se salga de la pantalla */
+    }
 }

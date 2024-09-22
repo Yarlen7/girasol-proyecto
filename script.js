@@ -1,12 +1,12 @@
 const girasolContainer = document.getElementById('girasol-container');
-const pipasContainer = document.getElementById('pipas-container'); // Contenedor de pipas
+const pipasContainer = document.getElementById('pipas-container');
 const totalPetalos = 20;  // Número total de pétalos del girasol
 const totalPipas = 10; // Número total de pipas del girasol
 
 function crearPetalo(angulo) {
     const petalo = document.createElement('div');
     petalo.classList.add('petalo');
-    petalo.style.transform = `rotate(${angulo}deg) translate(160px, -80px)`; // Ajusta la posición del pétalo
+    petalo.style.transform = `rotate(${angulo}deg) translate(0, -90px)`; // Ajusta la posición del pétalo
     girasolContainer.appendChild(petalo);
 }
 
